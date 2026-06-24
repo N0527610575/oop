@@ -1,3 +1,6 @@
+from builtins import super
+
+
 class Person:
     def __init__(self,name,age,city):
         self.name = name
@@ -51,6 +54,64 @@ uiniversity.remove_students(20)
 uiniversity.print_details()
 talmud.print_details()
 
+class Student(Person):
+    def __init__(self,name,age,city,student_id,grade):
+        super().__init__(name,age,city)
+
+        self.student_id = student_id
+        self.grade = grade
+
+    def study(self):
+        # print(f"שלום אני{self.name} בן {self.age }מעיר{self.city}לומד בשכבה{self.grade}")
+        print(f"{self.name}לומד בשכבה{self.grade}")
+
+    def introdoce(self):
+        super(introdoce(self))
+
+    def advanc_grade(self):
+        self.grade += 1
 
 
 
+class Teacher(Person):
+    def __init__(self,name,age,city,subject,years_expiriance):
+        super().__init__(name,age,city)
+
+        self.subject = subject
+        self.years_expiriance = years_expiriance
+
+
+
+    def teach(self):
+        print(f"{self.name}מלמד{self.subject}כבר{self.years_expiriance}שנים")
+    def introdoce(self):
+        super().introdoce()
+    def gain_expiriance(self,n):
+        self.years_expiriance += n
+
+
+
+class Principal(Person):
+    def __init__(self,name,age,city,years_as_principal):
+        super().__init__(name,age,city)
+        self.years_as_principal = years_as_principal
+    def manag(self):
+        print(f"{self.name}מנהל כבר{self.years_as_principal}שנים")
+    def add_managment(self,n):
+        self.years_as_principal += n
+
+
+s1 = Student("nahman",20,"hazor",20,8,)
+t1 = Teacher("yedidya",30,"bney brak","target",10)
+p1 = Principal("beni",34,"bney brak",9)
+
+s1.study()
+t1.teach()
+p1.manag()
+s1.advanc_grade()
+t1.gain_expiriance(3)
+p1.add_managment(8)
+
+s1.study()
+t1.teach()
+p1.manag()
