@@ -115,3 +115,4 @@ p1.add_managment(8)
 s1.study()
 t1.teach()
 p1.manag()
+
