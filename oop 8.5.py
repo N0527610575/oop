@@ -1,5 +1,5 @@
 class Product:
-    # --- שדות מחלקה (Class Variable) ---
+
     TAX_RATES = {
         'food': 0.0,
         'books': 0.0,
