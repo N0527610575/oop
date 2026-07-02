@@ -33,14 +33,13 @@ class LinkedList:
 
     def append(self, val, ):
         if self.is_empty():
+            self.head = Node(val)
+        else:
             curennt = self.head
             while curennt.next:
-                if curennt.next is None:
-                    curennt.next = Node(val)
-                else:
-                    curennt = curennt.next
+                curennt = curennt.next
 
-
+            curennt.next = Node(val)
 
     def del_fir(self):
         curent = self.head
@@ -87,11 +86,13 @@ class LinkedList:
         pass
 
 
-
 if __name__ == "__main__":
-    print("=== הוספת איברים ===")
-    lst.push(10)
-    lst.push(20)
-    lst.push(30)
+
+
+    l1 = LinkedList()
+    l1.append(34)
+    l1.append(39)
+    l1.append(4)
+    l1.print_list()
 
 
