@@ -1,3 +1,6 @@
+from builtins import property, staticmethod, print
+
+
 class Product:
 
     TAX_RATES = {
